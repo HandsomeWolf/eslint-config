@@ -1,0 +1,49 @@
+{
+  "name": "@handsomewolf/eslint-config",
+  "version": "0.0.8",
+  "description": "",
+  "keywords": [
+    "eslint",
+    "vue",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "HandsomeWolf <55856773@qq.com> (https://github.com/handsomewolf)",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": false
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-define-config": "^1.21.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-plugin-antfu": "^0.39.7",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsonc": "^2.9.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "eslint-plugin-yml": "^1.8.0",
+    "jsonc-eslint-parser": "^2.3.0",
+    "prettier": "^2.8.8",
+    "yaml-eslint-parser": "^1.2.2"
+  },
+  "devDependencies": {
+    "release-it": "^16.1.0"
+  }
+}
