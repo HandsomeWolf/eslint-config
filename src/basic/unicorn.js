@@ -9,6 +9,14 @@ module.exports = defineConfig({
       "error",
       { case: "kebabCase", ignore: ["README.md"] },
     ],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        replacements: {
+          ref: false,
+        },
+      },
+    ],
     "unicorn/better-regex": "error",
     "unicorn/custom-error-definition": "error",
     "unicorn/error-message": "error",
