@@ -20,12 +20,6 @@ dependencies:
   eslint-define-config:
     specifier: ^1.21.0
     version: 1.21.0
-  eslint-import-resolver-alias:
-    specifier: ^1.1.2
-    version: 1.1.2(eslint-plugin-import@2.27.5)
-  eslint-import-resolver-node:
-    specifier: ^0.3.7
-    version: 0.3.7
   eslint-plugin-antfu:
     specifier: ^0.39.7
     version: 0.39.7(eslint@8.44.0)(typescript@5.1.6)
@@ -1186,15 +1180,6 @@ packages:
   /eslint-define-config@1.21.0:
     resolution: {integrity: sha512-OKfreV19Nw4yK4UX1CDkv5FXWdzeF+VSROsO28DVi1BrzqOD4a3U71LJqEhcupK65MoLXxARQ0pSg8bDvNPONA==}
     engines: {node: ^16.13.0 || >=18.0.0, npm: '>=7.0.0', pnpm: '>= 8.6.0'}
-    dev: false
-
-  /eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.27.5):
-    resolution: {integrity: sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==}
-    engines: {node: '>= 4'}
-    peerDependencies:
-      eslint-plugin-import: '>=1.4.0'
-    dependencies:
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.62.0)(eslint@8.44.0)
     dev: false
 
   /eslint-import-resolver-node@0.3.7:

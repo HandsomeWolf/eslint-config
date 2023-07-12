@@ -29,8 +29,6 @@
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-define-config": "^1.21.0",
-    "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-antfu": "^0.39.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.9.0",
