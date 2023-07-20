@@ -1,34 +1,42 @@
 /* eslint-disable unicorn/prefer-module */
-const { defineConfig } = require('eslint-define-config');
+const { defineConfig } = require("eslint-define-config");
 
 module.exports = defineConfig({
-  plugins: ['import'],
+  plugins: ["import"],
   extends: [
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
   ],
   rules: {
-    'import/first': 'error',
-    'import/no-mutable-exports': 'error',
-    'import/no-duplicates': 'error',
-    'import/order': [
-      'error',
+    "import/first": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-duplicates": "error",
+    "import/order": [
+      "error",
       {
         groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object',
-          'type',
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type",
         ],
-        pathGroups: [{ pattern: '@/**', group: 'internal' }],
-        pathGroupsExcludedImportTypes: ['type'],
+        pathGroups: [{ pattern: "@/**", group: "internal" }],
+        pathGroupsExcludedImportTypes: ["type"],
       },
     ],
-    'import/no-default-export': 'error',
+    "import/no-default-export": "error",
+  },
+  settings: {
+    "import/resolver": {
+      alias: {
+        map: [["@", "./src"]],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
   },
 });
