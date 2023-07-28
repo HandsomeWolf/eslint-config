@@ -4,6 +4,6 @@ const a: ITest1 = {
   a: "1",
 };
 
-const a: ITest2 = {
+const b: ITest2 = {
   b: "1",
 };

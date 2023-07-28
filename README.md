@@ -44,34 +44,3 @@ pnpm i @handsomewolf/eslint-config -D
 }
 ```
 因为eslint默认只会校验JavaScript文件，而该依赖包的规则中增加了json、yml等文件校验，例如package.json排序等
-
-## monorepo
-如果项目是`monorepo`结构
-
-1. 请在根目录下的`.eslintrc`文件中增加以下代码，用来将@符号指向对应的路径
-
-```json
-{
-  "root": true,
-  "extends": ["@handsomewolf/eslint-config"],
-  "overrides": [
-    {
-      "files": ["packages/子包文件夹名/**/*"],
-      "settings": {
-        "import/resolver": {
-          "alias": {
-            "map": [["@", "./packages/子包文件夹名/src"]],
-            "extensions": [".ts", ".vue"]
-          }
-        }
-      }
-    }
-  ]
-}
-```
-注意：**子包文件夹名**换成你项目中对应的文件夹名称
-
-2. 在根workspace中安装`eslint-import-resolver-alias` 与 `eslint-import-resolver-node`依赖包在开发模式下
-```base
-pnpm i eslint-import-resolver-alias eslint-import-resolver-node -w -D
-```

@@ -39,4 +39,19 @@ module.exports = defineConfig({
       },
     },
   },
+  overrides: [
+    {
+      files: [
+        `**/*config*.?([cm])[jt]s?(x)`,
+        `**/views/**/*.?([cm])[jt]s?(x)`,
+        `**/pages/**/*.?([cm])[jt]s?(x)`,
+        `**/{index,vite,esbuild,rollup,webpack,rspack}.ts`,
+        "**/*.d.ts",
+        `**/*.md/**`,
+      ],
+      rules: {
+        "import/no-default-export": "off",
+      },
+    },
+  ],
 });
