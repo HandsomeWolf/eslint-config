@@ -1,6 +1,6 @@
 {
   "name": "@handsomewolf/eslint-config",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "",
   "keywords": [
     "eslint",
@@ -20,6 +20,9 @@
   },
   "scripts": {
     "release": "release-it"
+  },
+  "release-it": {
+    "git": false
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
