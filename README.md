@@ -24,7 +24,7 @@ pnpm i @handsomewolf/eslint-config -D
 3. 如果是vscode编辑器，请在根目录的 `.vscode/settings.json` 文件中新增
 ```json
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
