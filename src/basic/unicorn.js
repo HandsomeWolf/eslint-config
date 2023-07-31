@@ -7,7 +7,7 @@ module.exports = defineConfig({
   rules: {
     "unicorn/filename-case": [
       "error",
-      { case: "kebabCase", ignore: ["README.md"] },
+      { case: "kebabCase", ignore: ["README.md", "App.vue"] },
     ],
     "unicorn/better-regex": "error",
     "unicorn/custom-error-definition": "error",
