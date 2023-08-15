@@ -8,6 +8,10 @@ module.exports = defineConfig({
       extends: ["plugin:vue/vue3-recommended"],
       plugins: ["vue"],
       rules: {
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          { prefer: "type-imports" },
+        ],
         "vue/max-attributes-per-line": "off",
         "vue/no-v-html": "off",
         "vue/multi-word-component-names": "off",
