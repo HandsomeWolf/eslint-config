@@ -1,7 +1,7 @@
 {
   "name": "@handsomewolf/eslint-config",
   "version": "0.1.19",
-  "description": "",
+  "description": "eslint config preset",
   "keywords": [
     "eslint",
     "vue",
@@ -45,8 +45,5 @@
     "jsonc-eslint-parser": "^2.3.0",
     "prettier": "^3.0.3",
     "yaml-eslint-parser": "^1.2.2"
-  },
-  "devDependencies": {
-    "release-it": "^16.1.5"
   }
 }
