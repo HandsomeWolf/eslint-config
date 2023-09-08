@@ -21,9 +21,6 @@
   "release-it": {
     "git": false
   },
-  "scripts": {
-    "release": "release-it"
-  },
   "peerDependencies": {
     "eslint": ">=8.46.0"
   },
