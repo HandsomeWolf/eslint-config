@@ -25,6 +25,8 @@ module.exports = defineConfig({
         "no-undef": "off",
         "no-unused-expressions": "off",
         "no-unused-vars": "off",
+        "unused-imports/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "off",
       },
     },
   ],

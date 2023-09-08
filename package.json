@@ -18,11 +18,11 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "scripts": {
-    "release": "release-it"
-  },
   "release-it": {
     "git": false
+  },
+  "scripts": {
+    "release": "release-it"
   },
   "peerDependencies": {
     "eslint": ">=8.46.0"
@@ -39,6 +39,7 @@
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vue": "^9.17.0",
     "eslint-plugin-yml": "^1.8.0",
     "jsonc-eslint-parser": "^2.3.0",

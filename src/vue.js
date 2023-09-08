@@ -13,6 +13,11 @@ module.exports = defineConfig({
           { prefer: "type-imports" },
         ],
         "vue/max-attributes-per-line": "off",
+        "vue/no-setup-props-reactivity-loss": "off",
+        "vue/block-order": [
+          "error",
+          { order: ["script", "template", "style"] },
+        ],
         "vue/no-v-html": "off",
         "vue/multi-word-component-names": "off",
         "vue/require-prop-types": "off",
@@ -29,10 +34,6 @@ module.exports = defineConfig({
             svg: "always",
             math: "always",
           },
-        ],
-        "vue/component-tags-order": [
-          "error",
-          { order: ["script", "template", "style"] },
         ],
         "vue/custom-event-name-casing": ["error", "camelCase"],
         "vue/no-useless-v-bind": "error",

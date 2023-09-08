@@ -18,6 +18,7 @@ module.exports = defineConfig({
     sourceType: "module",
   },
   extends: ["eslint:recommended"],
+  plugins: ["unused-imports"],
   ignorePatterns: [
     "*.min.*",
     "*.d.ts",
@@ -51,7 +52,7 @@ module.exports = defineConfig({
     ".vitepress/cache",
   ],
   rules: {
-    "no-unused-vars": ["error", { args: "none", ignoreRestSiblings: true }], // https://eslint.org/docs/rules/no-unused-vars#args
+    "no-unused-vars": "off",
     "no-constant-condition": "warn", // https://eslint.org/docs/rules/no-constant-condition#allow
     "no-debugger": "warn", // https://eslint.org/docs/rules/no-debugger#allow
     "no-console": ["warn", { allow: ["warn", "error"] }], // https://eslint.org/docs/rules/no-console#allow
@@ -72,37 +73,37 @@ module.exports = defineConfig({
         memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
         allowSeparatedGroups: false,
       },
-    ], // https://eslint.org/docs/rules/sort-imports#ignorecasesensitive
+    ],
 
-    "no-var": "error", // https://eslint.org/docs/rules/no-var#enforcees6
+    "no-var": "error",
     "prefer-const": [
       "warn",
       { destructuring: "all", ignoreReadBeforeAssign: true },
-    ], // https://eslint.org/docs/rules/prefer-const#destructuring
+    ],
     "prefer-arrow-callback": [
       "error",
       { allowNamedFunctions: false, allowUnboundThis: true },
-    ], // https://eslint.org/docs/rules/prefer-arrow-callback#allownamedfunctions
+    ],
     "object-shorthand": [
       "error",
       "always",
       { ignoreConstructors: false, avoidQuotes: true },
-    ], // https://eslint.org/docs/rules/object-shorthand#avoidquotes
-    "prefer-rest-params": "error", // https://eslint.org/docs/rules/prefer-rest-params#enforcees6
-    "prefer-spread": "error", // https://eslint.org/docs/rules/prefer-spread#enforcees6
-    "prefer-template": "error", // https://eslint.org/docs/rules/prefer-template#enforcees6
-    "require-await": "error", // https://eslint.org/docs/rules/require-await#enforcees6
+    ],
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "require-await": "error",
 
-    "array-callback-return": "error", // https://eslint.org/docs/rules/array-callback-return#enforce
-    "block-scoped-var": "error", // https://eslint.org/docs/rules/block-scoped-var#enforce
-    eqeqeq: ["error", "smart"], // https://eslint.org/docs/rules/eqeqeq#enforce
-    "no-alert": "warn", // https://eslint.org/docs/rules/no-alert#enforce
-    "no-case-declarations": "error", // https://eslint.org/docs/rules/no-case-declarations#enforce
-    "no-fallthrough": ["warn", { commentPattern: "break[\\s\\w]*omitted" }], // https://eslint.org/docs/rules/no-fallthrough#commentpattern
-    "no-multi-str": "error", // https://eslint.org/docs/rules/no-multi-str#enforce
-    "no-with": "error", // https://eslint.org/docs/rules/no-with#enforce
-    "no-void": "error", // https://eslint.org/docs/rules/no-void#enforce
-    "no-duplicate-imports": "error", // https://eslint.org/docs/rules/no-duplicate-imports#enforce
+    "array-callback-return": "error",
+    "block-scoped-var": "error",
+    eqeqeq: ["error", "smart"],
+    "no-alert": "warn",
+    "no-case-declarations": "error",
+    "no-fallthrough": ["warn", { commentPattern: "break[\\s\\w]*omitted" }],
+    "no-multi-str": "error",
+    "no-with": "error",
+    "no-void": "error",
+    "no-duplicate-imports": "error",
 
     "no-unused-expressions": [
       "error",
@@ -111,9 +112,19 @@ module.exports = defineConfig({
         allowTernary: true,
         allowTaggedTemplates: true,
       },
-    ], // https://eslint.org/docs/rules/no-unused-expressions#allowshortcircuit
-    "no-lonely-if": "error", // https://eslint.org/docs/rules/no-lonely-if#enforce
-    "prefer-exponentiation-operator": "error", // https://eslint.org/docs/rules/prefer-exponentiation-operator#enforce
+    ],
+    "no-lonely-if": "error",
+    "prefer-exponentiation-operator": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
   },
   overrides: [
     {
