@@ -14,6 +14,7 @@ module.exports = defineConfig({
       },
       plugins: ["@typescript-eslint"],
       rules: {
+        "import/no-unresolved": "off",
         "unicorn/numeric-separators-style": "off",
         "@typescript-eslint/no-redeclare": "off",
         "@typescript-eslint/no-unused-vars": "off",
