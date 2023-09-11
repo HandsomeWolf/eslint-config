@@ -1,6 +1,7 @@
 {
   "eslint.enable": true,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -17,6 +18,8 @@
     "json",
     "jsonc"
   ],
-  "json.schemaDownload.enable": true,
-  "npm.packageManager": "pnpm"
+  "npm.packageManager": "pnpm",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
