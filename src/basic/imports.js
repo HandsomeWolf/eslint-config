@@ -25,7 +25,7 @@ module.exports = defineConfig({
           "object",
           "type",
         ],
-        pathGroups: [{ pattern: "@/**", group: "internal" }],
+        pathGroups: [{ pattern: "{{@,~}/,#}**", group: "internal" }],
         pathGroupsExcludedImportTypes: ["type"],
       },
     ],
